@@ -42,6 +42,7 @@ The screenshot shows the field `userIdentity.sessionContext.attributes.mfaAuthen
 
 
 ### Question 3
+**What is the processor number used on the web servers?**
 **Method**  
 Hardware inventory logs were analysed using the `hardware` sourcetype in Splunk, which contains system-level information such as CPU, memory, and disk details. As the question focuses on web servers, only hardware records associated with web server hosts were examined.
 
