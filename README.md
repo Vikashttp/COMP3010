@@ -40,5 +40,6 @@ Windows endpoint monitoring logs were analysed to compare operating system editi
 
 
 ## Conclusion and Lessons Learned
+This investigation demonstrates how cloud misconfigurations and endpoint anomalies can be identified through effective log analysis. The findings highlight the importance of access controls, monitoring, and baseline analysis within a Security Operations Centre.
 
 ## References
