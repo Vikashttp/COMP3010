@@ -32,13 +32,11 @@ Hardware inventory logs were analysed using the `hardware` sourcetype in Splunk,
 The CPU information is recorded in the `CPU_TYPE` field.
 
 Following the extraction method demonstrated in the question example (e.g. *Intel Core i7-8650U → i7-8650U*), the vendor name and clock speed were removed to extract the processor number.
+See screenshots/q3_cpu_type.png
 
 **Answer**  
 **E5-2676**
 
-
-
-Evidence: See screenshots/q3_cpu_type.png
 
 
 ### Question 4
