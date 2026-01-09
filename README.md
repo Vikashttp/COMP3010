@@ -16,27 +16,43 @@ The BOTSv3 dataset reflects these SOC workflows by providing diverse log sources
 ## Guided Investigation and Findings
 ### Question 1
 Initial exploration was performed to confirm that the BOTSv3 dataset was successfully ingested into Splunk and to identify available sourcetypes.
+Evidence: See screenshots/q1_index_overview.png
+
 
 ### Question 2
 AWS CloudTrail logs were analysed to identify AWS API activity performed without multi-factor authentication (MFA). The field used was userIdentity.sessionContext.attributes.mfaAuthenticated.
+Evidence: See screenshots/q2_mfa_field.png
+
 
 ### Question 3
 Hardware monitoring logs were analysed to identify processor information used on the web servers. The processor number identified was E5-2676.
+Evidence: See screenshots/q3_cpu_type.png
+
 
 ### Question 4
 CloudTrail logs were searched for the PutBucketAcl API call to identify when an S3 bucket was made publicly accessible. The event ID associated with enabling public access was ab45689d-69cd-41e7-8705-5350402cf7ac.
+Evidence: See screenshots/q4_putbucketacl_event.png
+
 
 ### Question 5
 From the same CloudTrail event, the IAM username responsible for the action was identified as bstoll.
+Evidence: See screenshots/q5_username.png
+
 
 ### Question 6
 The name of the S3 bucket that was made publicly accessible was frothlywebcode.
+Evidence: See screenshots/q6_bucket_name.png
+
 
 ### Question 7
 S3 access logs were analysed to identify files uploaded after the bucket became publicly accessible. The uploaded text file was OPEN_BUCKET_PLEASE_FIX.txt.
+Evidence: See screenshots/q7_s3_put_textfile.png
+
 
 ### Question 8
 Windows endpoint monitoring logs were analysed to compare operating system editions across hosts. One endpoint was identified as running a different Windows edition. The FQDN of this endpoint is bstoll-l.froth.ly.
+Evidence: See screenshots/q8_winhostmon_os.png
+
 
 
 ## Conclusion and Lessons Learned
