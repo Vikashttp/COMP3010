@@ -115,9 +115,21 @@ This confirms the file that was uploaded to the publicly accessible bucket.
 
 
 ### Question 8
-Windows endpoint monitoring logs were analysed to compare operating system editions across hosts. One endpoint was identified as running a different Windows edition. The FQDN of this endpoint is bstoll-l.froth.ly.
-Evidence: See screenshots/q8_winhostmon_os.png
+**What is the FQDN of the endpoint that is running a different Windows operating system edition than the others?**
+
+**Method**  
+Windows endpoint monitoring logs were analysed using the `winhostmon` sourcetype, which contains operating system information for endpoints. To establish a baseline, operating system data was aggregated across all hosts to identify any endpoint running a different Windows edition. A keyword-based search was then used to further inspect the identified endpoint.
+
+**Evidence**  
+By comparing operating system information across hosts, one endpoint was observed to be running a different Windows operating system edition than the others. A keyword search for this endpoint confirmed its fully qualified domain name (FQDN) as:
+
+
 <img width="1920" height="920" alt="q8_winhostmon_os3" src="https://github.com/user-attachments/assets/53583bd2-8f01-4933-a6fb-8ba3fff1a553" /><img width="1920" height="920" alt="q8_winhostmon_os5" src="https://github.com/user-attachments/assets/5b71c5ee-5be8-4aac-a405-be9d5304d848" />
+
+This identifies the endpoint running the different Windows edition.
+
+**Answer**  
+**bstoll-l.froth.ly**
 
 
 
