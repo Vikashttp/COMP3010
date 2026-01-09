@@ -52,6 +52,8 @@ Evidence: See screenshots/q6_bucket_name.png
 ### Question 7
 S3 access logs were analysed to identify files uploaded after the bucket became publicly accessible. The uploaded text file was OPEN_BUCKET_PLEASE_FIX.txt.
 Evidence: See screenshots/q7_s3_put_textfile.png
+<img width="1920" height="920" alt="q7_s3_put_textfile" src="https://github.com/user-attachments/assets/06bf9022-1dfe-4b6f-966c-d371c95db7fb" />
+
 
 
 ### Question 8
