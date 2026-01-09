@@ -32,7 +32,10 @@ Evidence: See screenshots/q3_cpu_type.png
 ### Question 4
 CloudTrail logs were searched for the PutBucketAcl API call to identify when an S3 bucket was made publicly accessible. The event ID associated with enabling public access was ab45689d-69cd-41e7-8705-5350402cf7ac.
 Evidence: See screenshots/q4_putbucketacl_event.png
+<img width="1920" height="920" alt="q4_putbucketacl_event" src="https://github.com/user-attachments/assets/9bafa5b5-fd52-4887-9343-624e53703417" />
 
+
+<img width="1920" height="920" alt="q4_putbucketacl_event2" src="https://github.com/user-attachments/assets/86e2fff8-1944-408a-aa1c-4c926444082f" />
 
 ### Question 5
 From the same CloudTrail event, the IAM username responsible for the action was identified as bstoll.
