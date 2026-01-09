@@ -42,8 +42,14 @@ Evidence: See screenshots/q3_cpu_type.png
 
 
 ### Question 4
-CloudTrail logs were searched for the PutBucketAcl API call to identify when an S3 bucket was made publicly accessible. The event ID associated with enabling public access was ab45689d-69cd-41e7-8705-5350402cf7ac.
-Evidence: See screenshots/q4_putbucketacl_event.png
+**Bud accidentally makes an S3 bucket publicly accessible. What is the event ID of the API call that enabled public access?**
+
+**Method**  
+AWS CloudTrail logs were analysed using the `aws:cloudtrail` sourcetype, which records AWS API activity. To identify changes to S3 bucket permissions, the logs were filtered for the `PutBucketAcl` API call, as this operation is used to modify S3 bucket access control lists, including making a bucket publicly accessible.
+
+**Evidence**  
+The search returned two `PutBucketAcl` events associated with the same user. As both events relate to ACL configuration, the event corresponding to the API call that applied the access control change was selected as the action that enabled public access to the bucket. The event ID extracted from this API call is shown below:
+See screenshots/q4_putbucketacl_event.png
 <img width="1920" height="920" alt="q4_putbucketacl_event" src="https://github.com/user-attachments/assets/9bafa5b5-fd52-4887-9343-624e53703417" />
 
 
