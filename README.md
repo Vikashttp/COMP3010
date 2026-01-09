@@ -25,7 +25,19 @@ Evidence: See screenshots/q2_mfa_field.png
 
 
 ### Question 3
-Hardware monitoring logs were analysed to identify processor information used on the web servers. The processor number identified was E5-2676.
+**Method**  
+Hardware inventory logs were analysed using the `hardware` sourcetype in Splunk, which contains system-level information such as CPU, memory, and disk details. As the question focuses on web servers, only hardware records associated with web server hosts were examined.
+
+**Evidence**  
+The CPU information is recorded in the `CPU_TYPE` field. As shown in Figure below, the system reports the following processor string:
+
+Following the extraction method demonstrated in the question example (e.g. *Intel Core i7-8650U → i7-8650U*), the vendor name and clock speed were removed to extract the processor number.
+
+**Answer**  
+**E5-2676**
+
+
+
 Evidence: See screenshots/q3_cpu_type.png
 
 
