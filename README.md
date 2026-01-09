@@ -18,6 +18,9 @@ The investigation environment was set up using a virtual machine running Ubuntu,
 Following installation, initial validation checks were performed to ensure that the dataset was successfully loaded. Searches were executed against the `botsv3` index to confirm data availability and to identify relevant sourcetypes, including AWS CloudTrail logs, S3 access logs, hardware inventory logs, and Windows endpoint monitoring logs.
 
 Once data ingestion and validation were confirmed, the environment was considered ready for investigation. The verified dataset was then used to conduct the guided incident analysis presented in the following sections.
+<img width="1920" height="920" alt="splunk interface" src="https://github.com/user-attachments/assets/3fb6d54b-9268-49e8-b0ab-06cce3ac7b2f" />
+<img width="1920" height="920" alt="botsv3 injestion" src="https://github.com/user-attachments/assets/9769b705-1c43-40bc-8cca-61d420aa07ad" />
+
 
 
 ## Guided Investigation and Findings
