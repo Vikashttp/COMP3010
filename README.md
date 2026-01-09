@@ -40,6 +40,8 @@ Evidence: See screenshots/q4_putbucketacl_event.png
 ### Question 5
 From the same CloudTrail event, the IAM username responsible for the action was identified as bstoll.
 Evidence: See screenshots/q5_username.png
+<img width="1920" height="920" alt="q5_username" src="https://github.com/user-attachments/assets/a096f5b2-c7f6-44b4-ab0e-f6ef0ef1adad" />
+
 
 
 ### Question 6
