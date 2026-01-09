@@ -14,14 +14,31 @@ The BOTSv3 dataset reflects these SOC workflows by providing diverse log sources
 ## Installation and Data Preparation
 
 ## Guided Investigation and Findings
-### Question 1
-Initial exploration was performed to confirm that the BOTSv3 dataset was successfully ingested into Splunk and to identify available sourcetypes.
-Evidence: See screenshots/q1_index_overview.png
+### Question 1  
+**Which IAM users accessed an AWS service in Frothly’s AWS environment?**
+
+**Method**  
+AWS CloudTrail logs were analysed using the `aws:cloudtrail` sourcetype, which records AWS API activity. IAM user activity was identified by inspecting the `userIdentity.userName` field, which records the username associated with each API request. Both successful and unsuccessful requests were included.
+
+**Evidence**  
+The CloudTrail logs show multiple unique values in the `userIdentity.userName` field, indicating the IAM users that accessed AWS services within the environment.
+
+**Answer**  
+bstoll,btun,jstokes,mramirez
+
 
 
 ### Question 2
-AWS CloudTrail logs were analysed to identify AWS API activity performed without multi-factor authentication (MFA). The field used was userIdentity.sessionContext.attributes.mfaAuthenticated.
-Evidence: See screenshots/q2_mfa_field.png
+**What field would you use to alert that AWS API activity has occurred without MFA?**
+
+**Method**  
+AWS CloudTrail logs were analysed using the `aws:cloudtrail` sourcetype to identify AWS API activity performed without multi-factor authentication. Console login events were excluded, and MFA-related fields were inspected.
+
+**Evidence**  
+The screenshot shows the field `userIdentity.sessionContext.attributes.mfaAuthenticated`, which indicates whether MFA was used during the API request.
+
+**Answer**  
+`userIdentity.sessionContext.attributes.mfaAuthenticated`
 
 
 ### Question 3
