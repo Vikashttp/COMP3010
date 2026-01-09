@@ -48,6 +48,12 @@ AWS CloudTrail logs were analysed using the `aws:cloudtrail` sourcetype, which r
 **Evidence**  
 The search returned two `PutBucketAcl` events associated with the same user. As both events relate to ACL configuration, the event corresponding to the API call that applied the access control change was selected as the action that enabled public access to the bucket. The event ID extracted from this API call is shown below:
 See screenshots/q4_putbucketacl_event.png
+
+This event represents the API call responsible for the S3 bucket misconfiguration.
+
+**Answer**  
+**ab45689d-69cd-41e7-8705-5350402cf7ac**
+
 <img width="1920" height="920" alt="q4_putbucketacl_event" src="https://github.com/user-attachments/assets/9bafa5b5-fd52-4887-9343-624e53703417" />
 
 
@@ -63,6 +69,12 @@ The AWS CloudTrail event identified in Question 4 was examined in further detail
 Within the `PutBucketAcl` event, the IAM username associated with the API call is recorded in the `userIdentity.userName` field. As shown in the screenshot, this field contains the value:
 
 See screenshots/q5_username.png
+
+This username corresponds to Bud.
+
+**Answer**  
+**bstoll**
+
 <img width="1920" height="920" alt="q5_username" src="https://github.com/user-attachments/assets/a096f5b2-c7f6-44b4-ab0e-f6ef0ef1adad" />
 
 
