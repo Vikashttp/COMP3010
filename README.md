@@ -13,6 +13,13 @@ The BOTSv3 dataset reflects these SOC workflows by providing diverse log sources
 
 ## Installation and Data Preparation
 
+The investigation environment was set up using a virtual machine running Ubuntu, with Splunk Enterprise installed as the Security Information and Event Management (SIEM) platform. The Boss of the SOC version 3 (BOTSv3) dataset was ingested into Splunk to provide realistic enterprise log data across cloud, endpoint, and infrastructure sources.
+
+Following installation, initial validation checks were performed to ensure that the dataset was successfully loaded. Searches were executed against the `botsv3` index to confirm data availability and to identify relevant sourcetypes, including AWS CloudTrail logs, S3 access logs, hardware inventory logs, and Windows endpoint monitoring logs.
+
+Once data ingestion and validation were confirmed, the environment was considered ready for investigation. The verified dataset was then used to conduct the guided incident analysis presented in the following sections.
+
+
 ## Guided Investigation and Findings
 ### Question 1  
 **Which IAM users accessed an AWS service in Frothly’s AWS environment?**
