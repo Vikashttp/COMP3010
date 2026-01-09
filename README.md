@@ -59,6 +59,9 @@ Evidence: See screenshots/q7_s3_put_textfile.png
 ### Question 8
 Windows endpoint monitoring logs were analysed to compare operating system editions across hosts. One endpoint was identified as running a different Windows edition. The FQDN of this endpoint is bstoll-l.froth.ly.
 Evidence: See screenshots/q8_winhostmon_os.png
+<img width="1920" height="920" alt="q8_winhostmon_os3" src="https://github.com/user-attachments/assets/53583bd2-8f01-4933-a6fb-8ba3fff1a553" /><img width="1920" height="920" alt="q8_winhostmon_os5" src="https://github.com/user-attachments/assets/5b71c5ee-5be8-4aac-a405-be9d5304d848" />
+
+
 
 
 
