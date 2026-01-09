@@ -87,6 +87,12 @@ The AWS CloudTrail `PutBucketAcl` event identified in Question 4 was examined to
 **Evidence**  
 Within the `PutBucketAcl` event, the name of the affected S3 bucket is recorded in the `requestParameters.bucketName` field. As shown in the screenshot, this field contains the value:
  See screenshots/q6_bucket_name.png
+ 
+This confirms the name of the bucket that was made publicly accessible.
+
+**Answer**  
+**frothlywebcode**
+
 
 
 ### Question 7
