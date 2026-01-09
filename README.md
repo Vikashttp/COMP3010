@@ -78,10 +78,15 @@ This username corresponds to Bud.
 <img width="1920" height="920" alt="q5_username" src="https://github.com/user-attachments/assets/a096f5b2-c7f6-44b4-ab0e-f6ef0ef1adad" />
 
 
+### Question 6  
+**What is the name of the S3 bucket that was made publicly accessible?**
 
-### Question 6
-The name of the S3 bucket that was made publicly accessible was frothlywebcode.
-Evidence: See screenshots/q6_bucket_name.png
+**Method**  
+The AWS CloudTrail `PutBucketAcl` event identified in Question 4 was examined to determine which S3 bucket was affected by the access control change. CloudTrail records request-specific details within the `requestParameters` object.
+
+**Evidence**  
+Within the `PutBucketAcl` event, the name of the affected S3 bucket is recorded in the `requestParameters.bucketName` field. As shown in the screenshot, this field contains the value:
+ See screenshots/q6_bucket_name.png
 
 
 ### Question 7
