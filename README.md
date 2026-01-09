@@ -96,8 +96,20 @@ This confirms the name of the bucket that was made publicly accessible.
 
 
 ### Question 7
-S3 access logs were analysed to identify files uploaded after the bucket became publicly accessible. The uploaded text file was OPEN_BUCKET_PLEASE_FIX.txt.
-Evidence: See screenshots/q7_s3_put_textfile.png
+**What is the name of the text file that was successfully uploaded to the publicly accessible S3 bucket?**
+
+**Method**  
+S3 access logs were analysed using the `aws:s3:accesslogs` sourcetype to identify activity performed after the bucket became publicly accessible. The logs were filtered for successful `PUT` operations with an HTTP status code of `200`, indicating successful uploads.
+
+**Evidence**  
+The search returned multiple successful `PUT` requests; however, only one of the uploaded objects was a plain text file. By examining the object names in the access logs, the following text file was identified as having been successfully uploaded:
+
+This confirms the file that was uploaded to the publicly accessible bucket.
+
+**Answer**  
+**OPEN_BUCKET_PLEASE_FIX.txt**
+
+
 <img width="1920" height="920" alt="q7_s3_put_textfile" src="https://github.com/user-attachments/assets/06bf9022-1dfe-4b6f-966c-d371c95db7fb" />
 
 
